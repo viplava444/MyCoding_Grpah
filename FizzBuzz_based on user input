@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+  int rem;
+  while(1){
+  printf("Enter the length till you want the sequence to be printed: \n");
+  scanf("%d",&rem);//Read user input length
+  if(rem==0)
+  {printf("You are exiting from the program\n");
+  break;}
+  printf("This is the sequence based on your input:\n");//Prints input
+  for(int i=1;i<=rem;i++)
+  { if((i%3==0)&&(i%5==0))//checks for divisibility by 3 and 5
+    {printf("FizzBuzz\n");
+        continue;}
+        
+    else if (i%3==0)//checks for divisibility by 3 
+    {printf("Fizz\n");
+    continue;
+    }
+    else if(i%5==0)//checks for divisibility by  5
+    { printf("Buzz \n");
+     continue;}
+     
+    printf("%d \n",i);
+}
+  }
+    return 0;
+}
